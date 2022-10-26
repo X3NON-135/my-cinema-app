@@ -1,5 +1,7 @@
 package spring.cinema.app.service.impl;
 
+import static org.springframework.security.core.userdetails.User.withUsername;
+
 import org.springframework.security.core.userdetails.User.UserBuilder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -20,8 +22,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userService.findByEmail(email).orElseThrow(() ->
                 new UsernameNotFoundException("User with email " + email + " not found"));
-        UserBuilder userBuilder =
-                org.springframework.security.core.userdetails.User.withUsername(email);
+        UserBuilder userBuilder = withUsername(email);
         userBuilder.password(user.getPassword());
         userBuilder.roles(user.getRoles().stream()
                 .map(r -> r.getRoleName().name())
