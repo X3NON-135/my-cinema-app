@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/X3NON-135/my-cinema-app"><img src="E:\\Downloads\\cinema.gif" alt="Cinema app" width="150"></a>
+  <a href="https://github.com/X3NON-135/my-cinema-app"><img src="https://media1.giphy.com/media/hTOvfENbKS9B576w60/giphy.gif?cid=ecf05e47al2jmp2m3c2xh3xzy62mr651vov4k5g2cceoklfm&rid=giphy.gif&ct=g" alt="Cinema app" width="150"></a>
   <br>
   <i> Cinema app </i>
   <br>
